@@ -1,0 +1,11 @@
+<nav >
+  <ul >
+    <li ><a href=>home</a></li>
+    <% if logged_in? %>
+    <li ><a href=> <%=  %></a></li>
+    <li ><a href=>log out</a></li>
+    <% else %>
+    <li class=><a href=>log in</a></li>
+    <% end %>
+  </ul>
+</nav>
