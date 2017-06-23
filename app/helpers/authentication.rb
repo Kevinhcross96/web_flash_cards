@@ -19,7 +19,7 @@ helpers do
   end
   def find_user
     if session[:id]
-      @user = User.find(session[:id])
+      @user ||= User.find(session[:id])
     end
   end
 

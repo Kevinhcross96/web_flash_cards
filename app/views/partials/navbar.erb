@@ -1,11 +1,13 @@
 <nav >
   <ul>
-    <li ><a href=>home</a></li>
+    <% find_user %>
     <% if logged_in? %>
-    <li ><a href=> <%=  %></a></li>
-    <li ><a href='/users/logout'>log out</a></li>
+    <li ><a href='/account'>Account</a></li>
+    <li ><a href='/users/logout'>Log out</a></li>
+    <li ><a href='/decks'>Homepage</a></li>
     <% else %>
-    <li class=><a href=>log in</a></li>
+    <li class=><a href='session/new'>Log in</a></li>
+    <li ><a href='/decks'>Homepage</a></li>
     <% end %>
   </ul>
 </nav>
