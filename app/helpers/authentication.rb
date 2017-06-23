@@ -5,12 +5,13 @@ helpers do
     @user.save!
   end
   def login
-    @user = User.find_by(email_address: params[:user_information][:email_address])
+    @user = User.find_by(email: params[:user_information][:email])
       if @user && @user.password == params[:user_information][:password]
         session[:id] = @user.id
-        redirect '/entries'
+        redirect '/account'
      else
-        redirect '/sessions/new'
+       # make better
+        redirect '/session/new'
       end
   end
   def logged_in?
@@ -22,7 +23,7 @@ helpers do
     end
   end
 
-
+  # this can be delted if not used
   def entry_authentication
     @dummy_item.user_id == session[:id] ? () : (redirect '/homepage')
   end
