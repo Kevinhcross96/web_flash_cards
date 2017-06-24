@@ -1,28 +1,22 @@
 <%= erb :'partials/navbar' %>
 <div>
   <span>
-    The question was:
-    <%= @card.question %>
+    Deck Name:
+    <%= @game.deck.name %>
   </span>
 </div>
 <div>
   <span>
-    Your answer was:
-    <%= @guess.guessed_answer %>
+    Number of guesses:
+    <%= @game.guesses.length %>
   </span>
 </div>
 <div>
   <span>
-    The correct answer was:
-    <%= @card.answer %>
+    Number of correct first guesses:
+    <%=  @game.first_guess_correct_count%>
   </span>
 </div>
-<div>
-  <span>
-    <%= answer_feedback %>
-  </span>
-</div>
-
 <div>
   <span>
     <% if questions_left? %>

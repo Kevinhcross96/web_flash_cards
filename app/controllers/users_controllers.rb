@@ -4,11 +4,11 @@ end
 
 post '/users' do
   create_user
-  redirect '/session/new'
+  redirect '/sessions/new'
 end
 
 get '/users/logout' do
   session[:id] = nil
   @user = nil
-  redirect '/session/new'
+  redirect '/sessions/new'
 end

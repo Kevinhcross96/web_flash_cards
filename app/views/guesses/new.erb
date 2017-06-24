@@ -1,2 +1,17 @@
-<%= @card.question %>
-<form method= "post" action= "/guess"
+<%= erb :'partials/navbar' %>
+<div>
+  <span>
+    Question:
+    <%= @card.question %>
+  </span>
+  <span>
+    Questions left to answer
+    <%= @game.unanswered_cards.length %>
+  </span>
+</div>
+<div>
+  <form method= "post" action= "/guess/card/<%= @card.id %>">
+    <input type= "text" name= "answer">
+    <input type= "submit">
+  </form>
+</div>

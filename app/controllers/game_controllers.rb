@@ -1,18 +1,33 @@
-post '/deck/:id/game' do
+post '/deck/:deck_id/game' do
   create_game
-  redirect "/deck/#{params[:id]}/guess/new"
+  redirect "/guess/new"
 end
 
-before '/deck/:id' do
+
+
+
+# refeactor using a before do
+
+get '/guess/new' do
   find_user
   find_game
-end
-
-get '/deck/:id/guess/new' do
   draw_card
   erb :'guesses/new'
 end
 
-post '/deck/:id/card' do
+get '/game/stats' do
+  find_game
+  erb :'games/stats'
+end
 
+post '/guess/card/:card_id' do
+  @guess = create_guess
+  redirect "/card/#{params[:card_id]}/guess/#{@guess.id}"
+end
+
+get '/card/:card_id/guess/:guess_id' do
+  find_card
+  find_guess
+  find_game
+  erb :'cards/show'
 end

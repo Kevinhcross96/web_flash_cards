@@ -6,8 +6,12 @@
     <li ><a href='/users/logout'>Log out</a></li>
     <li ><a href='/decks'>Homepage</a></li>
     <% else %>
-    <li class=><a href='session/new'>Log in</a></li>
+    <li class=><a href='sessions/new'>Log in</a></li>
     <li ><a href='/decks'>Homepage</a></li>
+    <% end %>
+    <% find_game %>
+    <% if game? %>
+    <li ><a href='/game/stats'>End game</a></li>
     <% end %>
   </ul>
 </nav>
