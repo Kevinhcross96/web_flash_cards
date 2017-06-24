@@ -1,0 +1,28 @@
+<%= erb :'partials/navbar' %>
+<div>
+  <span>
+    Deck Name:
+    <%= @game.deck.name %>
+  </span>
+</div>
+<div>
+  <span>
+    Number of guesses:
+    <%= @game.guesses.length %>
+  </span>
+</div>
+<div>
+  <span>
+    Number of correct first guesses:
+    <%=  @game.first_guess_correct_count%>
+  </span>
+</div>
+<div>
+  <span>
+    <% if questions_left? %>
+      <a href="/guess/new">Next Guess</a>
+    <% else %>
+      <a href="/game/stats">Game over</a>
+    <% end %>
+  </span>
+</div>

@@ -1,7 +1,7 @@
-get '/session/new' do
+get '/sessions/new' do
   erb :'sessions/new'
 end
 
-post '/session' do
+post '/sessions' do
   login
 end

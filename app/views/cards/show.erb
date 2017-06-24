@@ -1,5 +1,40 @@
 <%= erb :'partials/navbar' %>
 
+<div>
+  <span>
+    The question was:
+    <%= @card.question %>
+  </span>
+</div>
+<div>
+  <span>
+    Your answer was:
+    <%= @guess.guessed_answer %>
+  </span>
+</div>
+<div>
+  <span>
+    The correct answer was:
+    <%= @card.answer %>
+  </span>
+</div>
+<div>
+  <span>
+    <%= answer_feedback %>
+  </span>
+</div>
+
+<div>
+  <span>
+    <% if questions_left? %>
+      <a href="/guess/new">Next Guess</a>
+    <% else %>
+      <a href="/game/stats">Game over</a>
+    <% end %>
+  </span>
+</div>
+
+
 <p><%= @card.question %></p>
 
 <form method='post' action='/guess'>
@@ -7,3 +42,4 @@
   <input type='text' name='answer' placeholder='type your answer here'>
   <input type='submit'>
 </form>
+

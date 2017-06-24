@@ -4,6 +4,10 @@
 
 <ul>
   <% @decks.each do |deck| %>
+
+    <li><form method = "post"  action= "/deck/<%= deck.id %>/game"><input type= "submit" value= "<%= deck.name %>"></form></li>
+
     <li><a href="/deck/:id/game/new"><%= deck.name %></a></li>
+
   <% end %>
 <ul>
