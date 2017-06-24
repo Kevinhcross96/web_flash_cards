@@ -57,9 +57,8 @@ class Card < ApplicationRecord
 
 
 
-
-def self.games_specific_cards(game_id)
-  cards = Card.where(game_id: game_id)
-  cards.map{|card| card.guesses}
+def card_from_game(game_id)
+  Guess.where(card_id: self.id, game_id: game_id)
 end
+
 end

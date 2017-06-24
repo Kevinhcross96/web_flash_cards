@@ -3,16 +3,11 @@ post '/deck/:deck_id/game' do
   redirect "/guess/new"
 end
 
-
-
-
-# refeactor using a before do
-
 get '/guess/new' do
   find_user
   find_game
   draw_card
-  erb :'guesses/new'
+  questions_left? ? (erb :'guesses/new') : (redirect '/game/stats')
 end
 
 get '/game/stats' do
@@ -30,4 +25,15 @@ get '/card/:card_id/guess/:guess_id' do
   find_guess
   find_game
   erb :'cards/show'
+end
+
+get '/game/logout' do
+  end_game
+  redirect '/'
+end
+
+# this need to be secured 
+get '/game/:game_id/continue' do
+  session[:game_id] = params[:game_id]
+  redirect "/guess/new"
 end

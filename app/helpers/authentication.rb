@@ -11,7 +11,7 @@ helpers do
         redirect '/account'
      else
        # make better
-        redirect '/session/new'
+        redirect '/sessions/new'
       end
   end
   def logged_in?

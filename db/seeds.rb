@@ -4,18 +4,18 @@ Card.delete_all
 Deck.delete_all
 Guess.delete_all
 
-10.times do
-  User.create(email: Faker::Internet.safe_email, password: 'password')
-end
+# 10.times do
+#   User.create(email: Faker::Internet.safe_email, password: 'password')
+# end
 
 3.times do
   Deck.create(name: Faker::GameOfThrones.house)
 end
-
-Game.create(deck_id: 1, user_id: 1)
-Game.create(deck_id: 2, user_id: 2)
-Game.create(deck_id: 3, user_id: 3)
-
+#
+# Game.create(deck_id: 1, user_id: 1)
+# Game.create(deck_id: 2, user_id: 2)
+# Game.create(deck_id: 3, user_id: 3)
+#
 5.times do
   Card.create(question: "is true true?", answer: "true", deck_id: 1)
 end

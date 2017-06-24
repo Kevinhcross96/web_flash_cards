@@ -1,1 +1,9 @@
 <%= erb(:'partials/navbar') %>
+
+<% @games.each do |game| %>
+<div>
+  <% @game = game %>
+  <%= erb(:'partials/display_game_stats') %>
+  <%= erb(:'partials/account_footer') %>
+</div>
+<% end %>
