@@ -1,4 +1,5 @@
 <%= erb :'partials/navbar' %>
+
 <div>
   <span>
     The question was:
@@ -32,3 +33,13 @@
     <% end %>
   </span>
 </div>
+
+
+<p><%= @card.question %></p>
+
+<form method='post' action='/guess'>
+  <input type='hidden' name="card_id" value="<%= @card.id %>" >
+  <input type='text' name='answer' placeholder='type your answer here'>
+  <input type='submit'>
+</form>
+
