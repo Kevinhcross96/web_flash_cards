@@ -3,6 +3,7 @@ helpers do
       @game = Game.create(deck_id: params[:deck_id])
       find_user
       logged_in? ? (@game.user = @user) : ()
+      @game.save
       session[:game_id] = @game.id
   end
   def find_game

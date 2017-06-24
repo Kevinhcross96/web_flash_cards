@@ -1,0 +1,12 @@
+<nav >
+  <ul>
+    <% find_user %>
+    <% if questions_left? %>
+      <span> Game in progress:
+    <a href="/game/<%= @game.id %>/continue">continue</a>
+    </span>
+    <% else %>
+      <span>Game completed</span>
+    <% end %>
+
+</nav>

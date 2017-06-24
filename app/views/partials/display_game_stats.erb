@@ -1,0 +1,18 @@
+<div>
+  <span>
+    Deck Name:
+    <%= @game.deck.name %>
+  </span>
+</div>
+<div>
+  <span>
+    Number of guesses:
+    <%= @game.guesses.length %>
+  </span>
+</div>
+<div>
+  <span>
+    Number of correct first guesses:
+    <%=  @game.first_guess_correct_count%>
+  </span>
+</div>
