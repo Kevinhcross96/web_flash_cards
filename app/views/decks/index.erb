@@ -1,13 +1,11 @@
 <%= erb :'partials/navbar' %>
 
-<h1>List of Decks</h1>
-
-<ul>
-  <% @decks.each do |deck| %>
-
-    <li><form method = "post"  action= "/deck/<%= deck.id %>/game"><input type= "submit" value= "<%= deck.name %>"></form></li>
-
-    <li><a href="/deck/:id/game/new"><%= deck.name %></a></li>
-
-  <% end %>
-<ul>
+  <div id="decks_list">
+    <h1>List of Decks</h1>
+      <ul>
+        <% @decks.each do |deck| %>
+        <li><form method = "post"  action= "/deck/<%= deck.id %>/game"><input type= "submit" value= "<%= deck.name %>"></form></li>
+        <!-- <li><a href="/deck/:id/game/new"><%= deck.name %></a></li> -->
+        <% end %>
+      <ul>
+  </div
