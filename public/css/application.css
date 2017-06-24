@@ -1,0 +1,60 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: right;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/* Bordered form */
+form {
+    background-color: F8F8F8;
+    width: 30%;
+    border: 3px solid #f1f1f1;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+/* Full-width inputs */
+form input[type=email], input[type=password] {
+    width: 75%;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+form input[type=submit] {
+  background-color: #008CBA;
+  color: white;
+  padding: 5px 5px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  border: 3px solid #f1f1f1;
+  opacity: .5;
+}
+
+/* Add a hover effect for buttons */
+form input[type=submit]:hover {
+  opacity: 0.8;
+}
