@@ -1,23 +1,19 @@
 <%= erb :'partials/navbar' %>
-
-<div>
+<strong><p>The question was:</p></strong>
+<div id="question">
   <span>
-    The question was:
     <%= @card.question %>
   </span>
 </div>
+
 <div>
-  <span>
-    Your answer was:
-    <%= @guess.guessed_answer %>
-  </span>
+<p>Your answer was:  <strong><%= @guess.guessed_answer %></p></strong>
 </div>
+
 <div>
-  <span>
-    The correct answer was:
-    <%= @card.answer %>
-  </span>
+<p>The correct answer was:  <strong><%= @card.answer %></p></strong>
 </div>
+
 <div>
   <span>
     <%= answer_feedback %>
@@ -35,11 +31,10 @@
 </div>
 
 
-<p><%= @card.question %></p>
+<!-- <p><%= @card.question %></p> -->
 
-<form method='post' action='/guess'>
+<!-- <form method='post' action='/guess'>
   <input type='hidden' name="card_id" value="<%= @card.id %>" >
   <input type='text' name='answer' placeholder='type your answer here'>
   <input type='submit'>
-</form>
-
+</form> -->

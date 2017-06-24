@@ -1,15 +1,19 @@
 <%= erb :'partials/navbar' %>
-<div>
+<strong><p>Question:</p></strong>
+
+<div id="question">
   <span>
-    Question:
     <%= @card.question %>
   </span>
+</div>
+
+<div id="questions_left">
   <span>
-    Questions left to answer
-    <%= @game.unanswered_cards.length %>
+    <p>Questions left to answer: <%= @game.unanswered_cards.length %> </p>
   </span>
 </div>
-<div>
+
+<div id=question_form>
   <form method= "post" action= "/guess/card/<%= @card.id %>">
     <input type= "text" name= "answer">
     <input type= "submit">
