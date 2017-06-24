@@ -1,5 +1,5 @@
 helpers do
-  def create
+  def create_user
     @user = User.new(params[:user_information])
     @user.password = params[:user_information][:password]
     @user.save!
@@ -21,10 +21,5 @@ helpers do
     if session[:id]
       @user ||= User.find(session[:id])
     end
-  end
-
-  # this can be delted if not used
-  def entry_authentication
-    @dummy_item.user_id == session[:id] ? () : (redirect '/homepage')
   end
 end

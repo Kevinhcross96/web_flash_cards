@@ -3,7 +3,7 @@ get '/users/new' do
 end
 
 post '/users' do
-  create
+  create_user
   redirect '/session/new'
 end
 
