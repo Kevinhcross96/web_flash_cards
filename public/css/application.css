@@ -80,6 +80,7 @@ h1 {
 
 #question {
   /*width: 75%;*/
+  border-radius: 10px;
   margin-left: 25px;
   margin-right: 25px;
   padding: 10px;
