@@ -1,0 +1,15 @@
+<%= erb(:'partials/navbar') %>
+
+<div>
+  <form method= "post" action= "/cards/new/temp2">
+    <input type= "text" placeholder= "Card Question" name= "new_card_question">
+    <input type= "text" placeholder= "Card Answer" name= "new_card_answer">
+    <input type= "submit">
+  </form>
+</div>
+
+<div>
+  <form method= "post" action= "/account">
+    <input type= "submit" value= "No More Questions">
+  </form>
+</div>

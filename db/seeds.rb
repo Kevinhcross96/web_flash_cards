@@ -4,10 +4,10 @@
 # Deck.delete_all
 # Guess.delete_all
 
-Deck.create(name: "Ruby Enumerables")
-Deck.create(name: "Acronyms")
-Deck.create(name: "Javascript")
-Deck.create(name: "Databases")
+Deck.create(name: "Ruby Enumerables", public: true)
+Deck.create(name: "Acronyms", public: true)
+Deck.create(name: "Javascript", public: true)
+Deck.create(name: "Databases", public: true)
 
 Card.create(question: "Passes each element of the collection to the given block. The method returns true if the block ever returns a value other than false or nil. If the block is not given, Ruby adds an implicit block of { |obj| obj } that will cause _____ to return true if at least one of the collection members is not false or nil.  --- POSSIBILITIES --  .select --  .find --  .all? --  .sort --  . any? --  .include? --  .reduce  --  .sort_by", answer: '.any?', deck_id: 1)
 Card.create(question: "Passes each element of the collection to the given block. The method returns true if the block never returns false or nil. If the block is not given, Ruby adds an implicit block of { |obj| obj } which will cause ______ to return true when none of the collection members are false or nil.  --- POSSIBILITIES --  .select --  .find --  .all? --  .sort --  . any? --  .include? --  .reduce  --  .sort_by", answer: '.all?', deck_id: 1)
