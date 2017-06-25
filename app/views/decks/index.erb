@@ -1,11 +1,13 @@
 <%= erb :'partials/navbar' %>
+<% find_user %>
 
   <div id="decks_list">
     <h1>List of Decks</h1>
       <ul>
         <% @decks.each do |deck| %>
+          <% if (deck.public == true || deck.user_id == @user.id) %>
         <li><form method = "post"  action= "/deck/<%= deck.id %>/game"><input type= "submit" value= "<%= deck.name %>"></form></li>
-        <!-- <li><a href="/deck/:id/game/new"><%= deck.name %></a></li> -->
+          <%end%>
         <% end %>
       <ul>
   </div
