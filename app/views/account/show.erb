@@ -1,8 +1,8 @@
 <%= erb(:'partials/navbar') %>
 
 <div>
-  <li><form method = "post"  action= "/decks/new"><input type= "submit" value= "Create a new deck"></form></li>
-
+  <form method = "post"  action= "/decks/new"><input type= "submit" value= "Create a new deck"></form>
+</div>
 <% @games.each do |game| %>
 <div>
   <% @game = game %>

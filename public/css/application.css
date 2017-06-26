@@ -61,7 +61,6 @@ nav li a {
   margin-bottom: 3px;
   border: none;
   cursor: pointer;
-  /*width: 200px;*/
   border: 2px solid #f1f1f1;
   border-radius: 5px;
 }
@@ -69,6 +68,7 @@ nav li a {
 #decks_list form input[type=submit]:hover {
   opacity: 0.7;
 }
+
 h1 {
   font-family: sans-serif;
   font-size: 200%;
@@ -79,7 +79,6 @@ h1 {
 }
 
 #question {
-  /*width: 75%;*/
   border-radius: 10px;
   margin-left: 25px;
   margin-right: 25px;
@@ -94,4 +93,23 @@ h1 {
 #questions_left {
   font-size: 12px;
   margin-left: 25px;
+}
+
+#game_progress a {
+  color: red;
+}
+
+#game_progress {
+  color: white;
+  margin-left: 30px;
+}
+
+#game_stats {
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 10px;
+  border: 1px solid grey;
 }

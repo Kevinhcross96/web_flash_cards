@@ -1,18 +1,24 @@
-<div>
+<div id="game_stats">
   <span>
     Deck Name:
-    <%= @game.deck.name %>
+    <%= @game.deck.name %> <br>
   </span>
-</div>
-<div>
+<!-- </div>
+<div> -->
   <span>
     Number of guesses:
-    <%= @game.guesses.length %>
+    <%= @game.guesses.length %> <br>
   </span>
-</div>
-<div>
+<!-- </div>
+<div> -->
   <span>
     Number of correct first guesses:
-    <%=  @game.first_guess_correct_count%>
+    <%=  @game.first_guess_correct_count%> <br>
   </span>
+  <span>
+    Date Started:
+    <% date = @game.created_at - 033000 %>
+    <%=  date.strftime("%a, %b %d %Y %I:%M:%S") %> <br>
+  </span>
+
 </div>
